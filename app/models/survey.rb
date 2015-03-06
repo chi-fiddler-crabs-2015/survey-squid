@@ -3,4 +3,7 @@ class Survey < ActiveRecord::Base
   has_many   :questions
   has_many   :takes
   has_many   :takers, through: :takes, source: :users
+
+  validates :title, presence: true
+
 end
