@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
   has_many   :responses, through: :takes, source: :taker
   has_many   :surveys, foreign_key: "maker_id"
 
+  validates :email, presence: true
+  validates :email, uniqueness: true
+
   def password
     @password ||= Password.new(password_hash)
   end
