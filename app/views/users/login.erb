@@ -1,0 +1,36 @@
+<div class="container">
+   
+   
+
+
+   <div class="login">
+
+    <% if @errors %>
+      <%= @errors %>
+    <% end %>
+
+
+    <form method="post" action="/login">
+
+      <div class="login">
+      <input type="email" name="email" placeholder="login email">
+      </div>
+      
+      <div class="login">
+      <input type="password" name="password" placeholder="login password">
+      </div>
+
+      <div class="login">
+      <input type="submit" value="login">
+      </div>
+
+      <div class="login">
+      <a href="/users/new">Sign Up</a>
+      </div>
+
+
+    </form>
+    
+  </div>
+
+</div>
