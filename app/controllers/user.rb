@@ -1,5 +1,5 @@
 get '/users/new' do #signup
-  erb :'user/new'
+  erb :'users/new'
 end
 
 post '/users' do
@@ -9,7 +9,7 @@ post '/users' do
     redirect '/'
   else
     @errors = @user.errors
-    erb :'user/new'
+    erb :'users/new'
   end
 end
 

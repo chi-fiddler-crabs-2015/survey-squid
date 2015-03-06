@@ -104,3 +104,11 @@ h3 {
 a:hover; {
   text-decoration: underline;
 }
+
+.login {
+  text-align: center;
+}
+
+div  {
+  margin: 1em;
+}
