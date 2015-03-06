@@ -1,6 +1,6 @@
 get '/users' do
   @users = User.all
-  erb: 'users/index'
+  erb :'users/index'
 end
 
 get '/users/new' do #signup
