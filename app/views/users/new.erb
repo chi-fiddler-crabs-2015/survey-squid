@@ -1,0 +1,22 @@
+<div class ="container">
+  <h1> Sign Up </h1>
+
+  <% if @errors %>
+    <% @errors.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+  <% end %>
+
+  <form action="/users" method="post">
+    <label for="user[name]"> Name:</label>
+    <input type="text" name="user[name]"  placeholder="enter your full name">
+  </br>
+    <label for="user[email]"> Email:</label>
+    <input type="text" name="user[email]"  placeholder="enter a valid email address" re  quired>
+  </br>
+    <label for="user[password]"> Password:</label>
+    <input type="password" name="user[password]"  placeholder="make your password a good one!">
+  </br>
+    <input type="submit" value="SignUp!">
+  </form>
+</div>

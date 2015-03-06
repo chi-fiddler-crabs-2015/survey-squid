@@ -126,5 +126,7 @@ a:hover; {
 
 .form-label {
   padding: 20px;
-  
-}
+
+.login {
+  text-align: center;
+}  
