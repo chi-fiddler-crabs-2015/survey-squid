@@ -1,0 +1,86 @@
+html {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 10px;
+  width: 100%;
+  background-color: black;
+  height: 60px;
+}
+
+ul {
+  list-style: none;
+  float: right;
+}
+
+li {
+  display: inline;
+  margin-right: 30px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.brand {
+  font-family: "Lato", Verdana, sans-serif;
+  font-size: 3em;
+  float: left;
+  font-weight: normal; 
+}
+
+.brand a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.marketing {
+  clear: both;
+  padding: 10px;
+  margin: 1em 0;
+  background-color: #4D4B4D;
+  color: white;
+}
+
+ul {
+  padding-right: 10px;
+}
+
+h3 {
+  text-align: center;
+}
+
+.items {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 10px;
+  float: left;
+  padding: 1.5%;
+}
+
+#locavore {
+  /*float: right;*/
+}
+
+#pbr {
+  border-right: 1px solid gray;
+}
+
+#coffee {
+  border-right: 1px solid gray;
+}
+
+footer {
+  text-align: center;
+}
