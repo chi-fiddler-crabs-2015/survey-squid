@@ -1,5 +1,5 @@
 html {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Garamond, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -24,8 +24,8 @@ li {
   margin-right: 30px;
 }
 
-a {
-  color: white;
+a { 
+  color: black;
   text-decoration: none;
 }
 
@@ -34,6 +34,7 @@ a {
   font-size: 3em;
   float: left;
   font-weight: normal; 
+  color: white;
 }
 
 .brand a:hover {
@@ -41,7 +42,8 @@ a {
 }
 
 .container {
-  width: 80%;
+  font-family: Garamond, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -57,30 +59,48 @@ ul {
   padding-right: 10px;
 }
 
+ul li {
+  color: white;
+}
+
+
+.items {
+  display: inline-block;
+  width: 45%;
+  float: left;
+  margin-bottom: 10px;
+  padding: 1.5%;
+}
+
+#take-new {
+  /*float: right;*/
+}
+
+#build-new {
+  border-right: 1px solid gray;
+
+}
+
+
+footer {
+  padding-top: 10px;
+  border-top: 1px solid gray;
+  clear: both;
+  text-align: center;
+}
+
+h1 {
+  float: center;
+}
+
 h3 {
   text-align: center;
 }
 
-.items {
-  display: inline-block;
-  width: 30%;
-  margin-bottom: 10px;
-  float: left;
-  padding: 1.5%;
+.nav-link {
+  color: white;
 }
 
-#locavore {
-  /*float: right;*/
-}
-
-#pbr {
-  border-right: 1px solid gray;
-}
-
-#coffee {
-  border-right: 1px solid gray;
-}
-
-footer {
-  text-align: center;
+a:hover; {
+  text-decoration: underline;
 }

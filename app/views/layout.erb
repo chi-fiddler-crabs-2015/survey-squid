@@ -19,25 +19,19 @@
 </head>
 <body>
   <header>
-    <span class="brand"><a href="/">SurveySquid</a></span>
+    <a href="/"><span class="brand">SurveySquid</span></a>
     <nav>
       <ul>
-        <li><a href="/surveys">My Surveys</a></li>
-        <li><a href="/takes">Take a Survey</a></li>
+        <a href="/surveys"><li class='nav-link'>My Surveys</li></a>
+        <a href="/takes"><li class='nav-link'>Take a Survey</li></a>
         <% if session[:user_id] %>
-          <li><a href="/logout">Log Out</a></li>
+          <a href="/logout"><li class='nav-link'>Log Out</li></a>
         <% else %>
-          <li><a href="/login">Log In</a></li>
+          <a href="/login"><li class='nav-link'>Log In</li></a>
         <% end %>
       </ul>
     </nav>
   </header>
-
-  <div class='container'>
-
-
-  </div>
-
 
 
   <%= yield %>
