@@ -4,7 +4,7 @@ class CreateChoices < ActiveRecord::Migration
       t.string   :option
       t.integer  :question_id
 
-      t.timsestamps
+      t.timestamps
 
     end
   end
