@@ -1,0 +1,106 @@
+html {
+  font-family: Garamond, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 10px;
+  width: 100%;
+  background-color: black;
+  height: 60px;
+}
+
+ul {
+  list-style: none;
+  float: right;
+}
+
+li {
+  display: inline;
+  margin-right: 30px;
+}
+
+a { 
+  color: black;
+  text-decoration: none;
+}
+
+.brand {
+  font-family: "Lato", Verdana, sans-serif;
+  font-size: 3em;
+  float: left;
+  font-weight: normal; 
+  color: white;
+}
+
+.brand a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  font-family: Garamond, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.marketing {
+  clear: both;
+  padding: 10px;
+  margin: 1em 0;
+  background-color: #4D4B4D;
+  color: white;
+}
+
+ul {
+  padding-right: 10px;
+}
+
+ul li {
+  color: white;
+}
+
+
+.items {
+  display: inline-block;
+  width: 45%;
+  float: left;
+  margin-bottom: 10px;
+  padding: 1.5%;
+}
+
+#take-new {
+  /*float: right;*/
+}
+
+#build-new {
+  border-right: 1px solid gray;
+
+}
+
+
+footer {
+  padding-top: 10px;
+  border-top: 1px solid gray;
+  clear: both;
+  text-align: center;
+}
+
+h1 {
+  float: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.nav-link {
+  color: white;
+}
+
+a:hover; {
+  text-decoration: underline;
+}
