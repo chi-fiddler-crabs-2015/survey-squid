@@ -22,12 +22,13 @@
     <a href="/"><span class="brand">SurveySquid</span></a>
     <nav>
       <ul>
-        <a href="/surveys"><li class='nav-link'>My Surveys</li></a>
-        <a href="/takes"><li class='nav-link'>Take a Survey</li></a>
-        <% if session[:user_id] %>
+        <% if logged_in? %>
+          <a href="/surveys"><li class='nav-link'>My Surveys</li></a>
+          <a href="/takes"><li class='nav-link'>Take a Survey</li></a>
           <a href="/logout"><li class='nav-link'>Log Out</li></a>
         <% else %>
           <a href="/login"><li class='nav-link'>Log In</li></a>
+          <a href="/users/new"><li class='nav-link'>Sign Up</li></a>
         <% end %>
       </ul>
     </nav>
