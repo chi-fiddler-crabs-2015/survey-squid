@@ -2,6 +2,12 @@
   <% @user.surveys.each do |survey| %>
     <h2><%= survey.title %></h2>
 
+    <form method="get" action="/surveys/<%= survey.id %>/questions ">
+      <div>
+        <input type="submit" value="View Survey">
+      </div>
+    </form>
+
     <form method="get" action="/surveys/<%= survey.id %>/edit ">
       <div>
         <input type="submit" value="Edit Survey">
