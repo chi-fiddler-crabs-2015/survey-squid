@@ -12,3 +12,24 @@ other_choice_2 = other_question.choices.create!(option: "EWW?!")
 
 new_take = new_survey.takes.create!(taker: new_user_2)
 new_response = new_choice_1.responses.create!(take: new_take)
+
+
+new_survey_2 = new_user_2.surveys.create!(title: "Demo Survey")
+
+new_question = new_survey_2.questions.create!(title: "What is your favorite Beatle?")
+new_question.choices.create!(option: "John Lennon" )
+new_question.choices.create!(option: "Paul McCartney")
+new_question.choices.create!(option: "Ringo Starr" )
+new_question.choices.create!(option: "George Harrison")
+
+other_question = new_survey_2.questions.create!(title: "What is your favorite Spice Girl?")
+other_question.choices.create!(option: "Sporty" )
+other_question.choices.create!(option: "Baby")
+other_question.choices.create!(option: "Scary" )
+other_question.choices.create!(option: "Beckham")
+
+other_question = new_survey_2.questions.create!(title: "Who is your favorite KISS member?")
+other_question.choices.create!(option: "Peter Criss" )
+other_question.choices.create!(option: "Ace Freeley")
+other_question.choices.create!(option: "Gene Simmons" )
+other_question.choices.create!(option: "Paul Stanley")

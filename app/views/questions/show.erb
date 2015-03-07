@@ -1,20 +1,23 @@
 <div class='container'>
   <h3><%= @survey.title %></h3>
 
-  <% @questions.each do |question| %>
-    
-    <p><%= question.title %></p>
+  <div class='questions-show'>
+    <% @questions.each do |question| %>
 
-    <% question.choices.each do |choice| %>
-      <li class='choice'><%= choice.option %></li>      
+      <p><%= question.title %></p>
+
+      <% question.choices.each do |choice| %>
+        <li class='choice'><%= choice.option %></li>
+      <% end %>
+
+      <hr>
     <% end %>
+  </div>
 
-  <% end %>
-
-    <form id="add-question" method="get" action="/surveys/<%= @survey.id %>/questions/new"> 
-      <div>
-        <input type="submit" value="Add Question">
-      </div>
-    </form>
+  <form id="add-question" method="get" action="/surveys/<%= @survey.id %>/questions/new">
+    <div>
+      <input type="submit" value="Add Question">
+    </div>
+  </form>
 
 </div>
