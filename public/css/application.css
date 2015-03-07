@@ -130,3 +130,7 @@ a:hover; {
 .login {
   text-align: center;
 }  
+
+.choice {
+  display: block;
+}

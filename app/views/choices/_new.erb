@@ -1,3 +1,17 @@
-<textarea id="choice-box" rows="1" cols="5">
-</textarea>
+<p><%= question.title %></p>
+
+<form action="/questions/<%= question.id %>/choices" id="choice-button" method = "post">
+
+  <textarea id="choice-box" name="choice[one]" rows="1" cols="5">
+  </textarea>
+  <textarea id="choice-box" name="choice[two]" rows="1" cols="5">
+  </textarea>
+  <textarea id="choice-box" name="choice[three]" rows="1" cols="5">
+  </textarea>
+  <textarea id="choice-box" name="choice[four]" rows="1" cols="5">
+  </textarea>
+
+  <input type="submit" value="Submit">
+</form>
+<script src="/js/question/question_view.js"></script>
 

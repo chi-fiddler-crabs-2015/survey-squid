@@ -14,3 +14,15 @@ get '/surveys/:id/questions/new' do
   @survey = find_survey(params[:id])
   erb :"/questions/_new", layout: false
 end
+
+post '/surveys/:id/questions' do
+  puts params   
+  survey = find_survey(params[:id])
+  question = survey.questions.create(title: params[:question])
+  if request.xhr?
+    puts question.title
+    erb :"/choices/_new", locals: {question: question}, layout: false
+  else
+    erb :"questions/show"
+  end 
+end
