@@ -5,13 +5,11 @@
       <% @survey.questions.each do |question| %>
         <h3><%= question.title %></h3>
 
-        <% question.choices.each_with_index do |i, choice| %>
-        <input type="radio" name="choice-<%=i%>[]" value="<%= choice.option %>" /><%= choice.option %><br/>
+        <% question.choices.each_with_index do |choice, i| %>
+        <input type="checkbox" name="response_ids[]" value="<%= choice.id%>" /> <%= choice.option %><br/>
         <% end %>
       <% end %>
-    </div>
-
-    <div>
+      <br/>
       <input type="submit" value="Submit">
     </div>
 
