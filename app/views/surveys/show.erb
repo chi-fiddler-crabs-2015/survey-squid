@@ -2,18 +2,30 @@
   <% @user.surveys.each do |survey| %>
     <h2><%= survey.title %></h2>
 
-    <form method="get" action="/surveys/<%= survey.id %>/edit ">
-      <div>
-        <input type="submit" value="Edit Survey">
-      </div>
-    </form>
+    <div class='survey-show'>
+      <form method="get" action="/surveys/<%= survey.id %>/questions ">
+        <div>
+          <input type="submit" value="View Survey">
+        </div>
+      </form>
+    </div>
 
-    <form method="post" action="/surveys/<%= survey.id %>">
-      <input type="hidden" name="_method" value="delete">
-      <div>
-        <input type="submit" value="Delete Survey">
-      </div>
-    </form>
+    <div class='survey-show'>
+      <form method="get" action="/surveys/<%= survey.id %>/edit ">
+        <div>
+          <input type="submit" value="Edit Survey">
+        </div>
+      </form>
+    </div>
+
+    <div class='survey-show'>
+      <form method="post" action="/surveys/<%= survey.id %>">
+        <input type="hidden" name="_method" value="delete">
+        <div>
+          <input type="submit" value="Delete Survey">
+        </div>
+      </form>
+    </div>
 
     <hr>
 
