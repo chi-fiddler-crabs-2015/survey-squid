@@ -83,6 +83,7 @@ ul li {
 
 
 footer {
+  margin-top: 30px;
   padding-top: 10px;
   border-top: 1px solid gray;
   clear: both;
@@ -134,3 +135,9 @@ a:hover; {
 .choice {
   display: block;
 }
+
+/* Not working */
+/*.survey-show {
+  padding: 10px;
+  display: inline;
+}*/
