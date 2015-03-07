@@ -1,16 +1,18 @@
 get '/surveys' do
-  erb :"survey/show"
+  @user = current_user
+  erb :"surveys/show"
 end
 
 get '/surveys/new' do
-  erb :"survey/new"
+  erb :"surveys/new"
 end
 
 post '/surveys' do
-  @user = User.find_by(id: session[:user_id])
+  @user = current_user
   if @user
     survey = @user.surveys.create(params[:survey])
     if survey.valid?
+      puts survey
       redirect "/surveys/#{survey.id}/questions"
     else 
       redirect "/surveys/new"
@@ -18,4 +20,17 @@ post '/surveys' do
   else 
     redirect '/login'
   end
+end
+
+get 'surveys/:id' do
+  @survey = Survey.find_by(id: params[:id])
+  erb :"questions/show"
+end
+
+put 'surveys/:id/edit' do ## Not working yet
+  redirect '/surveys'
+end
+
+delete 'surveys/:id' do ## Not working yet
+  redirect '/surveys'
 end
