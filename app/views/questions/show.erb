@@ -1,0 +1,20 @@
+<div class='container'>
+  <h3><%= @survey.title %></h3>
+
+  <% @questions.each do |question| %>
+    
+    <p><%= question.title %></p>
+
+    <% question.choices.each do |choice| %>
+      <li class='choice'><%= choice.option %></li>      
+    <% end %>
+
+  <% end %>
+
+    <form id="add-question" method="get" action="/surveys/<%= @survey.id %>/questions/new"> 
+      <div>
+        <input type="submit" value="Add Question">
+      </div>
+    </form>
+
+</div>

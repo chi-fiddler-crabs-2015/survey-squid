@@ -12,7 +12,6 @@ post '/surveys' do
   if @user
     survey = @user.surveys.create(params[:survey])
     if survey.valid?
-      puts survey
       redirect "/surveys/#{survey.id}/questions"
     else 
       redirect "/surveys/new"

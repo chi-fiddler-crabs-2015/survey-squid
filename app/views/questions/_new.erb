@@ -1,18 +1,12 @@
 
 <div id="question">
 
-	<form action="/surveys/<%=@survey.id%>/question/new" method = "POST">
-		<input type="text" name="question[title]" placeholder="enter your question here">
-		
-
-		<button id="choice-button">Add Choice</button>
-
-		<% if @choice %>
-			<%= erb :"/choices/_new", locals:{choice: @choice} %>
-		<% end %>
-
-		 <input type="submit" value="SUBMIT">
+	<form action="/surveys/<%=@survey.id%>/questions" id="question-button" method = "post">
+		<input type="text" name="question" placeholder="Enter your question here">
+	
+		 <input type="submit" id='question-submit' value="Submit">
 	</form>
 
 </div>
+<script src="/js/question/question_view.js"></script>
 
