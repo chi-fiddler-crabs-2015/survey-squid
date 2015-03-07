@@ -22,15 +22,26 @@ post '/surveys' do
   end
 end
 
-get 'surveys/:id' do
+get '/surveys/:id' do
   @survey = Survey.find_by(id: params[:id])
   erb :"questions/show"
 end
 
-put 'surveys/:id/edit' do ## Not working yet
+get '/surveys/:id/edit' do ## Not working yet
+  @user = current_user
+  puts params
+  @survey = Survey.find_by(id: params[:id])
+  erb :"surveys/edit"
+end
+
+put '/surveys/:id' do
+  survey = Survey.find_by(id: params[:id])
+  survey.update_attributes(title: params[:title])
   redirect '/surveys'
 end
 
-delete 'surveys/:id' do ## Not working yet
+delete '/surveys/:id' do
+  survey = Survey.find_by(id: params[:id])
+  survey.destroy
   redirect '/surveys'
 end
