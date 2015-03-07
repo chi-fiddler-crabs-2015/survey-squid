@@ -1,19 +1,19 @@
-$(document).ready(function(){
+// $(document).ready(function(){
 
-	$.("#add-question").on("click", function(e){
-		e.preventDefault();
-		console.log("clicked")
+// 	$.("#add-question").on("click", function(e){
+// 		e.preventDefault();
+// 		console.log("clicked")
 		
-		var request = $.ajax({
-			url: "/",
-			type: "get"
-		});
+// 		var request = $.ajax({
+// 			url: "/",
+// 			type: "get"
+// 		});
 		
-		request.done(function(response){
-			$("#add-question").append(response)
-		});
-	});
-});
+// 		request.done(function(response){
+// 			$("#add-question").append(response)
+// 		});
+// 	});
+// });
 
 
 
