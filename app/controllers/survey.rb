@@ -40,6 +40,8 @@ put '/surveys/:id' do
   redirect '/surveys'
 end
 
-delete '/surveys/:id' do ## Not working yet
+delete '/surveys/:id' do
+  survey = Survey.find_by(id: params[:id])
+  survey.destroy
   redirect '/surveys'
 end
