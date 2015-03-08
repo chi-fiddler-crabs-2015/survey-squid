@@ -141,3 +141,34 @@ a:hover; {
   padding: 10px;
   display: inline;
 }*/
+
+.take_survey {
+  text-align: center;
+  /*float: right;*/
+}
+
+.squiddly {
+  display: inline;
+  max-height: 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*.checkbox {
+  display: inline;
+}*/
+
+.button {
+  margin-top: 10px;
+}
+
+#delete-question {
+  margin-bottom: 10px;
+}
+
+.nav {
+  position: fixed;
+  top: 0px;
+  right: 5px
+}

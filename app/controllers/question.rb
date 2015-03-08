@@ -1,4 +1,5 @@
 get '/surveys/:id/questions' do
+  puts 'it got here'
   @survey = find_survey(params[:id])
   @questions = @survey.questions
   if request.xhr?
@@ -6,8 +7,9 @@ get '/surveys/:id/questions' do
     @choice = @question.choices.create(params[:choice])
   	erb :"/choices/_new", locals: {choice: @choice}, layout: false
   else
+    puts 'it branched correctly'
   	erb :"questions/show"
-  end	
+  end
 end
 
 get '/surveys/:id/questions/new' do
@@ -16,7 +18,7 @@ get '/surveys/:id/questions/new' do
 end
 
 post '/surveys/:id/questions' do
-  puts params   
+  puts params
   survey = find_survey(params[:id])
   question = survey.questions.create(title: params[:question])
   if request.xhr?
@@ -24,5 +26,15 @@ post '/surveys/:id/questions' do
     erb :"/choices/_new", locals: {question: question}, layout: false
   else
     erb :"questions/show"
-  end 
+  end
+end
+
+delete '/questions/:question_id' do
+  question = Question.find_by(id: params[:question_id])
+  survey = question.survey
+  delete_choices(question)
+  puts 'it deleted choices'
+  question.destroy
+  puts survey.id
+  redirect "/surveys/#{survey.id}/questions"
 end
