@@ -147,6 +147,7 @@ a:hover; {
   /*float: right;*/
 }
 
-img .squiddly {
+.squiddly {
+  display: inline;
   max-height: 80px;
 }
