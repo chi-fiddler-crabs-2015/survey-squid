@@ -29,18 +29,12 @@ post '/surveys/:id/questions' do
   end
 end
 
-delete '/surveys/:id/questions/:question_id' do
-  survey = find_survey(params[:id])
+delete '/questions/:question_id' do
   question = Question.find_by(id: params[:question_id])
+  survey = question.survey
   delete_choices(question)
   puts 'it deleted choices'
   question.destroy
   puts survey.id
   redirect "/surveys/#{survey.id}/questions"
-end
-
-def delete_choices(question)
-  question.choices.each do |choice|
-    choice.destroy
-  end
 end

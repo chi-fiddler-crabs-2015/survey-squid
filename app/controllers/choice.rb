@@ -3,10 +3,11 @@ get '/questions/:id/choices' do
 end
 
 post '/questions/:id/choices' do
-  puts params[:choice]
   question = Question.find_by(id: params[:id])
-  params[:choice].each do |choice|
-    question.choices.create(option: choice.last)
+  all_choices = []
+  params[:choice].each_value do |choice|
+    all_choices << question.choices.create(option: choice)
   end
-  erb :"choices/show", locals: {choices: params[:choice]}, layout: false
+  puts all_choices
+  erb :"choices/show", locals: {choices: all_choices}, layout: false
 end
