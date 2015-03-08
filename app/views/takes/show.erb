@@ -1,0 +1,17 @@
+<div class='container'>
+  <% @surveys.each do |survey| %>
+    <h2><%= survey.title %></h2>
+
+    <div class='survey-show'>
+      <form method="get" action="/surveys/<%= survey.id %>/takes/new">
+        <div>
+          <input type="submit" value="Take Survey">
+        </div>
+      </form>
+    </div>
+
+    <hr>
+
+  <% end %>
+
+</div>

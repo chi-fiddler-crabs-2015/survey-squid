@@ -6,7 +6,7 @@
         <h3><%= question.title %></h3>
 
         <% question.choices.each_with_index do |choice, i| %>
-          <input type="checkbox" name="response_ids[]" value="<%= choice.id %>" />
+          <input class='checkbox' type="checkbox" name="response_ids[]" value="<%= choice.id %>" />
           <!-- Must understand the name/value fields of this better.  It will make most sense later. -->
           <%= choice.option %><br/>
         <% end %>
