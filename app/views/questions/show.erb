@@ -10,17 +10,19 @@
         <li class='choice'><%= choice.option %></li>
       <% end %>
 
-    <form method="post" action="/questions/<%= question.id %>">
-      <input type="hidden" name="_method" value="delete">
-      <div>
+    <div id="delete-question">
+      <form method="post" action="/questions/<%= question.id %>">
+        <input type="hidden" name="_method" value="delete">
+
         <input type="submit" value="Delete Question">
-      </div>
-    </form>
+      </form>
+    </div>
 
     <hr>
     <% end %>
   </div>
 
+  <br>
 
   <form id="add-question" method="get" action="/surveys/<%= @survey.id %>/questions/new">
     <div>
@@ -28,7 +30,7 @@
     </div>
   </form>
 
-  <button><a href="/surveys">Finished!</a></button>
-
+  <br>
+    <button><a href="/surveys">Finished!</a></button>
 
 </div>

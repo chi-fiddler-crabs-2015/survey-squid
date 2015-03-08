@@ -20,22 +20,20 @@
 </head>
 <body>
 
-  <header>
-    <!-- <img class="squiddly" src="/img/rsz_squiddly_diddly.png"> -->s
-    <a href="/"><span class="brand">SurveySquid</span></a>
-    <nav>
-      <ul>
-        <% if logged_in? %>
-          <a href="/surveys"><li class='nav-link'>My Surveys</li></a>
-          <a href="/takes"><li class='nav-link'>Take a Survey</li></a>
-          <a href="/logout"><li class='nav-link'>Log Out</li></a>
-        <% else %>
-          <a href="/login"><li class='nav-link'>Log In</li></a>
-          <a href="/users/new"><li class='nav-link'>Sign Up</li></a>
-        <% end %>
-      </ul>
 
-    </nav>
+  <header>
+    <img class="squiddly" src="/img/rsz_squiddly_diddly.png">
+    <a href="/"><span class="brand">SurveySquid</span></a>
+    <ul class='nav'>
+      <% if logged_in? %>
+        <a href="/surveys"><li class='nav-link'>My Surveys</li></a>
+        <a href="/takes"><li class='nav-link'>Take a Survey</li></a>
+        <a href="/logout"><li class='nav-link'>Log Out</li></a>
+      <% else %>
+        <a href="/login"><li class='nav-link'>Log In</li></a>
+        <a href="/users/new"><li class='nav-link'>Sign Up</li></a>
+      <% end %>
+    </ul>
   </header>
 
 

@@ -5,7 +5,9 @@
     <li class='choice'><%= choice.option %></li>
 
   <% end %>
+
   </ol>
+
 
   <form method="post" action="/questions/<%= choices[0].question.id %>">
     <input type="hidden" name="_method" value="delete">
