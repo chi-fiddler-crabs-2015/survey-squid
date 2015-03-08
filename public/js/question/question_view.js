@@ -4,6 +4,7 @@ $(document).ready(function(){
 	// Creating a new question form
 	$("#add-question").on("submit", function(e){
 		e.preventDefault();
+		e.stopImmediatePropagation();
 
 		var form = $(this)
 		$.ajax({
@@ -18,6 +19,7 @@ $(document).ready(function(){
 	// Create a new question (submitting)
 	$('#question-button').on("submit", function(e){
 		e.preventDefault();
+		e.stopImmediatePropagation();
 
 		var form = $(this)
 		$.ajax({
@@ -45,7 +47,7 @@ $(document).ready(function(){
 				console.log(response)
 				$("#question p").after(response)
 				$("#choice-button").remove()
-
+				console.log('3')
 			}
 		});
 	});
