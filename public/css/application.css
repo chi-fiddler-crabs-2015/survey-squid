@@ -141,3 +141,8 @@ a:hover; {
   padding: 10px;
   display: inline;
 }*/
+
+.take_survey {
+  text-align: center;
+  /*float: right;*/
+}
